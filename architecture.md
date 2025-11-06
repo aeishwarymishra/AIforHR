@@ -137,3 +137,17 @@ graph TD
 
 
 ```
+```mermaid
+graph LR
+  M[Mantrika AI]
+  D1[SWTT engine holistic]
+  D2[Agentic services]
+  D3[Explainable AI]
+  D4[Talent ROI]
+  D5[Open integration]
+  M --> D1
+  M --> D2
+  M --> D3
+  M --> D4
+  M --> D5
+```
