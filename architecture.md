@@ -152,3 +152,18 @@ graph LR
   M --> D4
   M --> D5
 ```
+Competitor buckets by primary focus (no cross lines)
+```mermaid
+graph TD
+  subgraph Skills and planning
+    E[Eightfold AI]
+    B[Beamery]
+    C[Cornerstone SkyHive]
+  end
+
+  subgraph Mobility and sourcing
+    G[Gloat]
+    S[SeekOut]
+  end
+
+```
