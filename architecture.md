@@ -167,3 +167,13 @@ graph TD
   end
 
 ```
+
+```mermaid
+graph LR
+  D1[SWTT holistic] -- contrast --> E[Eightfold AI]
+  D2[Agentic services] -- contrast --> G[Gloat]
+  D3[Explainable AI] -- contrast --> S[SeekOut]
+  D4[Talent ROI] -- contrast --> B[Beamery]
+  D5[Open integration] -- contrast --> C[Cornerstone SkyHive]
+
+```
