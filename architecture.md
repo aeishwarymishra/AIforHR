@@ -7,6 +7,7 @@ flowchart LR
   E --> F[Retention & Engagement]
   F --> G[Succession & Exit]
 ```
+Hiring journey with Mantrika (sequence)
 ```mermaid
 sequenceDiagram
   participant CA as Candidate
@@ -42,8 +43,22 @@ sequenceDiagram
 
   CA->>AT: Accept offer
   AT->>MA: Create onboarding plan
-  MA-->>LM: Push targeted learning ta
+  MA-->>LM: Push targeted learning tasks
 
 
+
+```
+SWTT dataflow and surfaces (flowchart)
+```mermaid
+flowchart TD
+  A[Sources: HRIS ATS LMS Projects Surveys] --> B[Ingest and Clean]
+  B --> C[Embeddings and Feature Store]
+  C --> D[SWTT Engine: Skill Will Task Time]
+  D --> E[Scores and Explanations]
+  E --> F[APIs and Webhooks]
+  F --> G[Recruiting Dashboard]
+  F --> H[Manager Console]
+  F --> I[Employee App]
+  F --> J[BI Tools and Data Warehouse]
 
 ```
