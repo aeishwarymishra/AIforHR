@@ -88,3 +88,12 @@ flowchart TD
   AC3 --> OC4
   AC4 --> OC2
 ```
+Governance and explainability loop
+```mermaid
+flowchart TD
+  X[Decision: Rank, Match, Risk] --> Y[Why Panel: features, weights, thresholds]
+  Y --> Z[Bias Checks: group metrics and drift]
+  Z --> AA[Audit Log: exportable JSON and CSV]
+  AA --> AB[Policy Review and Approvals]
+  AB --> X
+```
