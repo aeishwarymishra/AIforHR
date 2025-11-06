@@ -137,6 +137,7 @@ graph TD
 
 
 ```
+Mantrika differentiators at a glance (clean hub and spokes)
 ```mermaid
 graph LR
   M[Mantrika AI]
