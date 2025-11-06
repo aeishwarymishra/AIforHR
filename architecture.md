@@ -97,3 +97,29 @@ flowchart TD
   AA --> AB[Policy Review and Approvals]
   AB --> X
 ```
+```mermaid
+graph TD
+    subgraph "Mantrika.ai Positioning"
+      M[Mantrika.ai<br>🧠 SWTT Engine (Skill, Will, Task, Time)<br>🎯 Agentic HR Intelligence<br>💡 Humanistic Engineering]
+    end
+
+    subgraph "Established Talent Intelligence Platforms"
+      E[Eightfold.ai<br>🌐 Talent Graph<br>🏢 Enterprise-Scale Compliance (FedRAMP, ISO)<br>💼 Lifecycle Automation]
+      B[Beamery<br>📊 Workforce Intelligence<br>🧮 Skills Graph + Scenario Planning<br>🎓 Learning Integration]
+      G[Gloat<br>🌀 Internal Talent Marketplace<br>🚀 Project & Gig Matching<br>👥 Mobility Focus]
+      S[SeekOut<br>🔍 AI Sourcing & External Talent Discovery<br>🤖 Agentic Recruiter Support<br>💬 Spot Service]
+      C[Cornerstone + SkyHive<br>📚 LMS + Skills Graph<br>🧩 Continuous Learning Integration<br>📈 Workforce Analytics]
+    end
+
+    %% Connections (Competitive Anchors)
+    M -->|Competes on Talent Intelligence Core| E
+    M -->|Competes on AI Skills Mapping & Graph| B
+    M -->|Integrates Internal Mobility + Gig Layer| G
+    M -->|Uses External Signals for Hiring| S
+    M -->|Targets Learning & Skills Development Loop| C
+
+    %% Differentiation
+    M -->|Differentiator: SWTT Holistic Engine (Skill + Will + Task + Time)| D1[🧩 Unique Holistic Metric vs Skill-only models]
+    M -->|Differentiator: Agentic Architecture (multi-agent orchestration)| D2[⚙️ Modular Agents for Recruit, Retain, Reward]
+    M -->|Differentiator: Humanistic UX and Bias Auditing| D3[🌱 Explainable, Ethical & Transparent AI Layer]
+```
