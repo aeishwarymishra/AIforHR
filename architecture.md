@@ -8,39 +8,42 @@ flowchart LR
   F --> G[Succession & Exit]
 ```
 ```mermaid
-flowchart TB
-  %% Subgraphs: use plain titles, no [Title] syntax
-  subgraph Existing_HR_Stack
-    HRIS[HRIS: Workday/SAP/Oracle]
-    ATS[ATS: Greenhouse/Lever]
-    LMS[LMS: Docebo/Cornerstone]
-    BI[BI: PowerBI/Tableau]
+sequenceDiagram
+  participant CA as Candidate
+  participant CS as Careers Site
+  participant RE as Recruiter
+  participant MA as Mantrika
+  participant AT as ATS
+  participant HM as Hiring Manager
+  participant LM as LMS
+
+  CA->>CS: View role, start application
+  CS->>MA: Send profile signals (consented)
+  MA-->>CS: SWTT-aligned content & questions
+
+  CA->>AT: Submit application
+  AT->>MA: Sync application data
+  MA-->>RE: Ranked shortlist + explain-why
+
+  RE->>HM: Share shortlist
+  HM->>MA: Define must-have tasks/skills
+  MA-->>RE: Interview plan + scorecards
+
+  RE->>CA: Schedule interviews
+  HM->>MA: Submit feedback
+  MA-->>RE: Aggregate SWTT + bias checks
+
+  alt Strong fit
+    RE->>CA: Extend offer
+    MA-->>RE: Offer acceptance likelihood
+  else Needs development
+    MA-->>RE: Upskilling path + alt candidates
   end
 
-  subgraph Mantrika_Layer
-    SWTT[SWTT Engine (Skill Will Task Time)]
-    AGENTS[Agent Bus: RecruitEdge, PerformX, ProfitOptima]
-    ETHICS[Explainability + Bias Audit + ROI Dashboard]
-  end
+  CA->>AT: Accept offer
+  AT->>MA: Create onboarding plan
+  MA-->>LM: Push targeted learning ta
 
-  subgraph Data_Sources
-    SKILLS[Resumes and Skills DB]
-    PROJECTS[Jira, Git, Task Logs]
-    FEEDBACK[Surveys and 360 Feedback]
-    HRDATA[Org Hierarchy, Payroll, KPIs]
-  end
-
-  %% Edges (avoid subgraph-to-subgraph links)
-  SKILLS --> SWTT
-  PROJECTS --> SWTT
-  FEEDBACK --> SWTT
-  HRDATA --> SWTT
-
-  HRIS --> SWTT
-  SWTT --> HRIS
-
-  AGENTS --> BI
-  Mantrika_Layer --> HRIS
 
 
 ```
