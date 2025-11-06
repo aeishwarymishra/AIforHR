@@ -98,32 +98,41 @@ flowchart TD
   AB --> X
 ```
 ```mermaid
-graph LR
-    subgraph Platforms
-        E[Eightfold AI]
-        B[Beamery]
-        G[Gloat]
-        S[SeekOut]
-        C[Cornerstone SkyHive]
-    end
+graph TD
+    %% Competitors
+    E[Eightfold AI]
+    B[Beamery]
+    G[Gloat]
+    S[SeekOut]
+    C[Cornerstone SkyHive]
 
-    M[Mantrika AI]
-
-    %% Relationships
-    M --> E
-    M --> B
-    M --> G
-    M --> S
-    M --> C
+    %% Core (Mantrika)
+    M[Mantrika AI Core Platform]
 
     %% Differentiators
-    D1[SWTT Engine]
-    D2[Agentic Microservices]
-    D3[Explainable Bias Aware AI]
+    D1[Holistic SWTT Engine]
+    D2[Agentic Architecture]
+    D3[Explainable Ethical AI]
+    D4[Talent ROI Dashboard]
+    D5[Open Integration Layer]
 
+    %% Connections
     M --> D1
     M --> D2
     M --> D3
+    M --> D4
+    M --> D5
+
+    %% Comparison lines
+    D1 -->|vs skills graph| E
+    D1 -->|vs workforce planning| B
+    D2 -->|vs static modules| G
+    D3 -->|vs opaque ML models| E
+    D3 -->|vs black box sourcing| S
+    D4 -->|vs HR metrics only| C
+    D5 -->|vs closed ecosystems| E
+    D5 -->|vs single vendor lock in| B
+
 
 
 
