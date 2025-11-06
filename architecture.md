@@ -18,7 +18,7 @@ flowchart TB
   end
 
   subgraph Mantrika_Layer
-    SWTT[SWTT Engine (Skill-Will-Task-Time)]
+    SWTT[SWTT Engine (Skill Will Task Time)]
     AGENTS[Agent Bus: RecruitEdge, PerformX, ProfitOptima]
     ETHICS[Explainability + Bias Audit + ROI Dashboard]
   end
