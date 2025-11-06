@@ -9,29 +9,38 @@ flowchart LR
 ```
 ```mermaid
 flowchart TB
-  subgraph HR_Stack [Existing HR Stack]
-    HRIS[HRIS (Workday / SAP / Oracle)]
-    ATS[ATS (Greenhouse / Lever)]
-    LMS[LMS (Docebo / Cornerstone)]
-    BI[BI (PowerBI / Tableau)]
+  %% Subgraphs: use plain titles, no [Title] syntax
+  subgraph Existing_HR_Stack
+    HRIS[HRIS: Workday/SAP/Oracle]
+    ATS[ATS: Greenhouse/Lever]
+    LMS[LMS: Docebo/Cornerstone]
+    BI[BI: PowerBI/Tableau]
   end
 
-  subgraph Mantrika [Mantrika.ai Layer]
+  subgraph Mantrika_Layer
     SWTT[SWTT Engine (Skill-Will-Task-Time)]
-    Agents[Agent Bus: RecruitEdge, PerformX, ProfitOptima]
-    Ethics[Explainability + Bias Audit + ROI Dashboard]
+    AGENTS[Agent Bus: RecruitEdge, PerformX, ProfitOptima]
+    ETHICS[Explainability + Bias Audit + ROI Dashboard]
   end
 
-  subgraph Sources [Input Data]
-    Skills[Resumes and Skills DB]
-    Projects[Jira, Git, Task Logs]
-    Feedback[Surveys and 360 Feedback]
-    HRData[Org Hierarchy, Payroll, KPIs]
+  subgraph Data_Sources
+    SKILLS[Resumes and Skills DB]
+    PROJECTS[Jira, Git, Task Logs]
+    FEEDBACK[Surveys and 360 Feedback]
+    HRDATA[Org Hierarchy, Payroll, KPIs]
   end
 
-  Sources --> SWTT
-  HR_Stack --> Mantrika
-  Mantrika --> HR_Stack
-  Mantrika --> BI
+  %% Edges (avoid subgraph-to-subgraph links)
+  SKILLS --> SWTT
+  PROJECTS --> SWTT
+  FEEDBACK --> SWTT
+  HRDATA --> SWTT
+
+  HRIS --> SWTT
+  SWTT --> HRIS
+
+  AGENTS --> BI
+  Mantrika_Layer --> HRIS
+
 
 ```
