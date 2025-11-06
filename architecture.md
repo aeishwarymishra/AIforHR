@@ -10,15 +10,15 @@ flowchart LR
 ```mermaid
 flowchart TB
   subgraph HR_Systems [Existing HR Stack]
-    HRIS[(Workday / SAP / Oracle)]
+    HRIS[(Workday / SAP / Oracle HCM)]
     ATS[(Greenhouse / Lever)]
     LMS[(Docebo / Cornerstone)]
     BI[(PowerBI / Tableau)]
   end
 
   subgraph Mantrika_AI [Mantrika.ai Layer]
-    SWTT[SWTT Engine™ (Skill–Will–Task–Time)]
-    Agents[Agent Bus (RecruitEdge, PerformX, ProfitOptima)]
+    SWTT[SWTT Engine (Skill–Will–Task–Time)]
+    Agents[Agent Bus: RecruitEdge, PerformX, ProfitOptima]
     Ethics[Explainability + Bias Audit + ROI Dashboard]
   end
 
