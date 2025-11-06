@@ -62,3 +62,29 @@ flowchart TD
   F --> J[BI Tools and Data Warehouse]
 
 ```
+Event-driven interventions (who does what, when)
+```mermaid
+flowchart TD
+  EV[HR Events and Signals] -->|new role, attrition risk, low will| BUS[Event Bus]
+  BUS --> AG1[Agent RecruitEdge: shortlist and interview plan]
+  BUS --> AG2[Agent Mobility: internal match and gigs]
+  BUS --> AG3[Agent Retain: risk alert and playbook]
+  BUS --> AG4[Agent Learn: skill gap to learning path]
+
+  AG1 --> AC1[Notify Recruiter]
+  AG2 --> AC2[Notify Employee and Manager]
+  AG3 --> AC3[Notify HRBP]
+  AG4 --> AC4[Notify LMS and Employee]
+
+  subgraph Outcomes
+    OC1[Time to hire]
+    OC2[Time to productivity]
+    OC3[Internal fill rate]
+    OC4[Retention uplift]
+  end
+
+  AC1 --> OC1
+  AC2 --> OC3
+  AC3 --> OC4
+  AC4 --> OC2
+```
