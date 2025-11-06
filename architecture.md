@@ -98,25 +98,30 @@ flowchart TD
   AB --> X
 ```
 ```mermaid
-graph TD
-  M[Mantrika.ai - SWTT Engine - Agentic HR - Humanistic UX]
+graph LR
+    subgraph Talent Intelligence Platforms
+        E[Eightfold AI]
+        B[Beamery]
+        G[Gloat]
+        S[SeekOut]
+        C[Cornerstone+SkyHive]
+    end
 
-  subgraph Established Platforms
-    E[Eightfold AI - Talent Graph - Compliance]
-    B[Beamery - Workforce Intelligence]
-    G[Gloat - Internal Marketplace]
-    S[SeekOut - External Sourcing]
-    C[Cornerstone + SkyHive - LMS + Skills]
-  end
+    subgraph Mantrika.ai
+        M[Mantrika.ai]
+    end
 
-  M -- Core intelligence overlap --> E
-  M -- Skills mapping overlap --> B
-  M -- Internal mobility integration --> G
-  M -- External signals for hiring --> S
-  M -- Learning and skills loop --> C
+    %% Relationships
+    M -->|Core overlap| E
+    M -->|Skills graph overlap| B
+    M -->|Internal mobility overlap| G
+    M -->|External sourcing overlap| S
+    M -->|Learning & skills loop| C
 
-  M --> D1[Differentiator: SWTT holistic metric]
-  M --> D2[Differentiator: Agentic architecture]
-  M --> D3[Differentiator: Explainable AI and bias logs]
+    %% Differentiators
+    M --> D1[SWTT Engine (Skill-Will-Task-Time)]
+    M --> D2[Agentic microservices]
+    M --> D3[Explainable, bias-aware AI]
+
 
 ```
